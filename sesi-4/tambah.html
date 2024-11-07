@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostrap Demo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here #1</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here #2</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here #3</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here #4</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <div class="row mt-2">
+            <h5>Tambah Karyawan</h5>
+            <form action="">
+
+                <div class="mb-3">
+                    <label for="nik">NIK :</label><br>
+                    <input type="text" name="nik" id="nik" size="20" maxlength="20" required placeholder="contoh: 1234567890">
+                </div>
+                <div class="mb-3">
+                    <label for="nama">Nama:</label><br>
+                    <input type="text" name="nama" id="nama" required placeholder="contoh: Pevita Pearce">
+                </div>
+                <div class="mb-3">
+                    <label for="tanggal-mulai">Tanggal Mulai:</label><br>
+                    <input type="date" name="tanggal-mulai" id="tanggal-mulai" required min="2022-01-11">
+                </div>
+                <div class="mb-3">
+                    <label for="gaji-pokok">Gaji Pokok:</label><br>
+                    <input type="number" name="gaji-pokok" id="gaji-pokok" required min="1000000" step="1000">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="status-karyawan">Status Karyawan</label><br>
+                    
+                    <div class="form-check">
+                        <input type="radio" name="status-karyawan" id="tetap" value="TETAP">
+                        <label for="tetap">TETAP</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="status-karyawan" id="kontrak" value="KONTRAK">
+                        <label for="kontrak">KONTRAK</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="status-karyawan" id="magang" value="MAGANG">
+                        <label for="magang">MAGANG</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success" name="btn-submit" id="btn-submit" value="Submit">
+                    <i class="fa fa-save"></i>
+                    Submit
+                </button>
+                <button type="reset" class="btn btn-primary" name="btn-reset" id="btn-reset" value="Reset">
+                    <i class="fa fa-arrows-rotate"></i>
+                    Reset
+                </button>
+
+            </form>
+        </div>
+      </div>
+
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

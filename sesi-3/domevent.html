@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="uji-heading"
+    onmouseover="sorot(this)"
+    onmouseout="keluarSorot(this)">
+        Sorot dong!
+    </h1>
+
+    <h2 id="uji-klik" onmousedown="tahan(this)" onmouseup="lepas(this)">
+        Klik dong!
+    </h2>
+
+    <label for="uji-input">Uji Coba Input</label><br>
+    <input type="text" id="uji-input"><br>
+    <span id="uji-span"></span><br>
+    <button onclick="klik()">Klik</button>
+    <button onclick="ulangi()">Ulangi</button>
+    <input type="text" id="uji-input" onkeyup="tiru()"><br>
+
+    <script>
+        function sorot(obj){
+            obj.innerHTML = "Sudah disorot";
+        }
+        function keluarSorot(obj){
+            obj.innerHTML = "Sorot lagi dong!";
+        }
+        function tahan(obj){
+            obj.innerHTML = "Lepasin...";
+        }
+        function lepas(obj){
+            obj.innerHTML = "Klik lagi dong!";
+        }
+        function klik(){
+            valueInput = document.getElementById('uji-input').value;
+            document.getElementById('uji-span').innerHTML = valueInput;
+            span = document.getElementById('uji-span');
+
+            if (valueInput == ""){
+                span.innerHTML = "Inputan Kosong";
+                span.style = "color:red";
+            } else {
+                span.innerHTML = "Input : '"+valueInput+"'";
+                span.style = "color:blue";
+            }
+        }
+        function ulangi(){
+            document.getElementById('uji-input').value = "";
+            document.getElementById('uji-span').innerHTML = "";
+            document.getElementById('uji-heading').innerHTML = "Sorot dong!";
+            document.getElementById('uji-klik').innerHTML = "Klik dong!";
+        }
+        function tiru(){
+            valueInput = document.getElementById('uji-input').value;
+            document.getElementById('uji-span').innerHTML = valueInput;
+        }
+    </script>
+</body> 
+</html>
